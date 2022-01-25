@@ -89,12 +89,100 @@ if x == 6: # note: == is the equality operator (= assignment operator)
     # i.e. the boolean condition evaluates to true
     # note standard indentation is 1 tab = 4 spaces
 
+# we also have an else keyword
+# which executes when the preceding if condition is false
+if x==6:
+    print("x is 6")
+else:
+    print("x is not 6")
 
-m = int(input("Enter an integer> "))
-n = int(input("Enter an integer> "))
-m = m + 5
-n = 3 * n
-print("m =", m, "\nn =", n)
+x = 5
+if x < 0:
+    print("x is negative")
+elif x > 0:
+    print("x is positive")
+else:
+    print("x is 0")
+
+# LOOPS
+# use a loop to repeat statemetns
+# we have for loops and while loops
+# for structure
+# for item in sequence:
+#   body (statements we want to repeat)
+# there are lots of sequences in python!
+# lists are sequences!!
+my_list = {1, 2, 3, 4, 5}
+for item in my_list:
+    print(item)
+
+# strings are sequences!!
+for character in "gonzaga":
+    print(character)
+print("here", character)
+
+# we can generate our own sequences
+# built in function range() generates a sequence
+# range(9) # generates a squence [0,9]
+for i in range(9):
+    print(i, end=" ")
+print()
+
+# range(stop) : [0, stop)
+# range(start, stop) : [start, stop)
+# range(start, stop, step) : [start, stop) going up by step (increment)
+
+for i in range(4,9):
+    print(i, end=" ")
+print()
+
+for i in range(4, 9, 2):
+    print(i, end=" ")
+print()
+
+# task 1: try print the previous output in reverse 8 6 4
+for i in range(8, 3, -2):
+    print(i, end=" ")
+print()
+
+# task 2: try printing the first 20 even numbers all on one  line
+# separated by a comma and a space
+# 2, 4, ..., 38, 40
+for i in range(2, 40, 2):
+    print(i, end=", ")
+print(i + 2)
+
+# while loop structure
+# while some condition is true:
+#   body
+#   prograss towards your condition being false
+
+k = 2
+while k <= 38:
+    print(k, end=", ")
+    k += 2 # progress
+print(k)
+
+# ADVANCED LOOPS
+# like if statements we can nest loops
+# user the break keyword to get an early exit from a loop
+while True:
+    user_input = input("Enter a word (stop to exit): ")
+    if user_input == "stop":
+        break
+
+# FUNCTIONS 
+# a function is a named sequence of statements
+# minimize redundant code
+# write once, call multiple times
+# helps with code organization
+
+
+
+
+
+
+
 
 
 
