@@ -1,5 +1,6 @@
 # best practice is to put all import statements at the top
 import math
+import random
 
 # this is a one line comment
 # a comment is "code" that is ignored by Python
@@ -166,16 +167,76 @@ print(k)
 # ADVANCED LOOPS
 # like if statements we can nest loops
 # user the break keyword to get an early exit from a loop
-while True:
-    user_input = input("Enter a word (stop to exit): ")
-    if user_input == "stop":
-        break
+# while True:
+#     user_input = input("Enter a word (stop to exit): ")
+#     if user_input == "stop":
+#         break
 
 # FUNCTIONS 
 # a function is a named sequence of statements
 # minimize redundant code
 # write once, call multiple times
 # helps with code organization
+
+# help(print)
+# examples of function calls: help(), print(), round(), int(), input(),...
+# we can write our own
+# functions take inputs
+# functions produce outputs
+# function structure
+# def function_name(parameter list):
+#   body
+
+# body does not execute until the function is called
+
+# example 1: no parameters (no arguments in call)
+# no return value
+def say_hello():
+    print("hello")
+
+say_hello() # function call
+for _ in range(5):
+    say_hello()
+
+# example 2: one parameter and no return value
+def say(message): # message is a parameter
+    print(message) 
+
+say("hi there") # "hi there" is the argument
+say("gonzaga")
+say("go zags!")
+say(5)
+
+# TASK: define/call a function that accepts the radius of a circle
+# and prints out the area of that circle
+
+def circle_area(radius):
+    area = math.pi * radius ** 2
+    print("area:", area)
+
+circle_area(5.0)
+
+# example 3: one parameter and one return value
+
+def circle_area2(radius):
+    area = math.pi * radius ** 2
+    return area
+
+result = circle_area2(5.0)
+print("result:", result)
+
+# example 4: one parameter and two return values!!
+
+def circle_area_and_circumference(radius):
+    area = math.pi * radius ** 2
+    circumference = 2 * math.pi * radius
+    return area, circumference # tuple (immutable list)
+
+results = circle_area_and_circumference(5.0)
+print("results:", results)
+print("results:", results[0], results[1]) # results is a tuple
+result1, result2 = circle_area_and_circumference(5.0) # tuple unpacking
+print(result1, result2)
 
 
 
